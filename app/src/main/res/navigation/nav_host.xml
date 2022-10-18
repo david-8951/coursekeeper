@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/splashScren">
+    <fragment
+        android:id="@+id/welcomePageOne"
+        android:name="com.example.coursekeeper.WelcomePageOne"
+        android:label="fragment_welcome_page_one"
+        tools:layout="@layout/fragment_welcome_page_one" >
+        <action
+            android:id="@+id/action_welcomePageOne_to_welcome_Screen_Two"
+            app:destination="@id/welcome_Screen_Two" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome_Screen_Two"
+        android:name="com.example.coursekeeper.Welcome_Screen_Two"
+        android:label="fragment_welcome__screen__two"
+        tools:layout="@layout/fragment_welcome__screen__two" >
+        <action
+            android:id="@+id/action_welcome_Screen_Two_to_registerPage"
+            app:destination="@id/registerPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScren"
+        android:name="com.example.coursekeeper.SplashScreen"
+        android:label="fragment_splash_scren"
+        tools:layout="@layout/fragment_splash_scren" >
+        <action
+            android:id="@+id/action_splashScren_to_welcomePageOne"
+            app:destination="@id/welcomePageOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPage"
+        android:name="com.example.coursekeeper.SignUpPage"
+        android:label="fragment_sign_up_page"
+        tools:layout="@layout/fragment_sign_up_page" >
+        <action
+            android:id="@+id/action_registerPage_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.example.coursekeeper.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreen_to_eventAddPage"
+            app:destination="@id/eventAddPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/coursesList"
+        android:name="com.example.coursekeeper.CoursesList"
+        android:label="fragment_courses_list"
+        tools:layout="@layout/fragment_courses_list" />
+    <fragment
+        android:id="@+id/eventAddPage"
+        android:name="com.example.coursekeeper.EventAddPage"
+        android:label="fragment_event_add_page"
+        tools:layout="@layout/fragment_event_add_page" >
+        <action
+            android:id="@+id/action_eventAddPage_to_coursesList"
+            app:destination="@id/coursesList" />
+    </fragment>
+
+</navigation>
